@@ -1,0 +1,43 @@
+{
+  "name": "JavaScript-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --config ./config/webpack/webpack.dev.js",
+    "build": "webpack --config ./config/webpack/webpack.prod.js",
+    "clear": "rd /s /q dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nitroglicerine/JavaScript-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nitroglicerine/JavaScript-exercises/issues"
+  },
+  "homepage": "https://github.com/Nitroglicerine/JavaScript-exercises#readme",
+  "type": "module",
+  "dependencies": {
+    "add": "^2.0.6",
+    "cli": "^1.0.1",
+    "d": "^1.0.1",
+    "node": "^20.1.0",
+    "px2rem-loader": "^0.1.9",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.54.5",
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
