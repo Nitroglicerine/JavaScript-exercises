@@ -1,7 +1,7 @@
 let user = {
   name: "Semen",
   skills: ["lazzy master", "chill god", "inclusive man"],
-  SayHI() {
+  sayHi() {
     console.log("Hello from" + this.name);
   },
 
@@ -13,7 +13,7 @@ let user = {
   skillsView() {
     this.skills.forEach((skills) => console.log(skills));
   },
-  skillQuestion() {
+  findNdeleteSkill() {
     let question = prompt("insert skill", ["lazzy"]);
 
     let result = this.skills.filter((element) => {
@@ -33,4 +33,4 @@ let user = {
     }
   },
 };
-console.log(user.skillQuestion());
+console.log(user.findNdeleteSkill());
