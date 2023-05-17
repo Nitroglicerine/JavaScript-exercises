@@ -7,7 +7,8 @@ let user = {
 
   createSkill() {
     let x = prompt("Add skill", ["Mad"]);
-
+    if (x== null || x == undefined || x == ""){alert("skill has not been removed")}
+    else{
     let f = this.skills.findIndex((item) => {
       if (item == x) {
         return true;
@@ -22,11 +23,8 @@ let user = {
       }
     } else {
       this.skills.push(x);
-      if (x == null) {
-        this.skills.splice(-1, 1);
-      }
     }
-
+  }
     return this.skills;
   },
 
@@ -46,7 +44,7 @@ let user = {
       if (confirm("delete this skill ?") == true) {
         this.skills.splice(result, 1);
       } else {
-        alert("skin has not been removed");
+        alert("skill has not been removed");
       }
     } else {
       alert("Match skills not found");
