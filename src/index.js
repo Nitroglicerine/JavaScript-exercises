@@ -7,7 +7,27 @@ let user = {
 
   createSkill() {
     let x = prompt("Add skill", ["Mad"]);
-    this.skills.push(x);
+
+    let f = this.skills.findIndex((item) => {
+      if (item == x) {
+        return true;
+      }
+    });
+    if (f >= 0) {
+      alert("This skill is exist ");
+      if (confirm("do yo want create new skill ?") == true) {
+        return this.createSkill();
+      } else {
+        alert("skill has not been added");
+      }
+    } else {
+      this.skills.push(x);
+      if (x == null) {
+        this.skills.splice(-1, 1);
+      }
+    }
+
+    return this.skills;
   },
 
   skillsView() {
@@ -33,4 +53,4 @@ let user = {
     }
   },
 };
-console.log(user.findNdeleteSkill());
+console.log(user.createSkill());
