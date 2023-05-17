@@ -7,8 +7,11 @@ let user = {
 
   createSkill() {
     let x = prompt("Add skill", ["Mad"]);
-    if (x== null || x == undefined || x == ""){alert("skill has not been removed")}
-    else{
+     if (x == null || x == undefined || x == "") {
+      alert("skill has not been added");
+      return this.skills;
+    }
+
     let f = this.skills.findIndex((item) => {
       if (item == x) {
         return true;
@@ -22,9 +25,10 @@ let user = {
         alert("skill has not been added");
       }
     } else {
+      
       this.skills.push(x);
     }
-  }
+
     return this.skills;
   },
 
