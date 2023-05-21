@@ -79,11 +79,11 @@ function createAuto() {
   return autoBase;
 }
 const newarray = [];
-createBase(createAuto(), newarray);
+console.log(createBase(createAuto(), newarray));
 function createBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
 while (confirm("Додати ще авто ?") == true) {
-  console.log(createBase(createAuto(), newarray));
+  createBase(createAuto(), newarray);
 }
