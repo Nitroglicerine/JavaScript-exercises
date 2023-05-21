@@ -55,8 +55,6 @@
 //   },
 // };
 
-
-console.log(createBase(createAuto()))
 function createAuto() {
   let autoBase = {
     brand: "vehicleBrand",
@@ -80,11 +78,12 @@ function createAuto() {
 
   return autoBase;
 }
-
-function createBase(a) {
-  const newarray = [];
+const newarray = [];
+console.log(createBase(createAuto(), newarray));
+function createBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
-while(confirm ("Додати ще авто ?")==true){console.log(createBase(createAuto()))}
-
+while (confirm("Додати ще авто ?") == true) {
+  console.log(createBase(createAuto(), newarray));
+}
