@@ -79,7 +79,7 @@ function createAuto() {
   return autoBase;
 }
 const newarray = [];
-console.log(createBase(createAuto(), newarray));
+createBase(createAuto(), newarray);
 function createBase(a, newarray) {
   newarray.push(a);
   return newarray;
