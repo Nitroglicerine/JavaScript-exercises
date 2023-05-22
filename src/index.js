@@ -64,7 +64,7 @@ function createAuto() {
 
   autoBase.carBrand = prompt("Марка авто", ["Toyota"]);
   do {
-    autoBase.productionYear = prompt("Рік випуску", [2022]);
+    autoBase.productionYear = +prompt("Рік випуску", [2022]);
     if (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023) {
       alert("Пашол НАХУЙ");
     }
