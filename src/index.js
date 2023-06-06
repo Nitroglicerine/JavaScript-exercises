@@ -58,8 +58,8 @@
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
-    gearBoxType: "vehicleType",
-    productionYear: "vehicleYear",
+    gearBoxType: true,
+    productionYear: 1984,
   };
 
   autoBase.carBrand = prompt("Марка авто", ["Toyota"]);
@@ -69,12 +69,7 @@ function createAuto() {
       alert("Пашол НАХУЙ");
     }
   } while (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023);
-  do {
-    autoBase.gearBoxType = prompt("Коробка автомат?", ["Ні/Так"]);
-    if (autoBase.gearBoxType != "Так" && autoBase.gearBoxType != "Ні") {
-      alert("Або так, або Ні");
-    }
-  } while (autoBase.gearBoxType != "Так" && autoBase.gearBoxType != "Ні");
+  autoBase.gearBoxType = confirm("Коробка автомат?");
 
   return autoBase;
 }
