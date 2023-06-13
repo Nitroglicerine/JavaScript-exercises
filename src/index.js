@@ -55,6 +55,11 @@
 //   },
 // };
 
+const newarray = [];
+addBase(createAuto(), newarray);
+while (confirm("Додати ще авто ?") == true) {
+  addBase(createAuto(), newarray);
+}
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
@@ -73,13 +78,8 @@ function createAuto() {
 
   return autoBase;
 }
-const newarray = [];
-createBase(createAuto(), newarray)
-function createBase(a, newarray) {
+function addBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
-while (confirm("Додати ще авто ?") == true) {
-  createBase(createAuto(), newarray);
-}
-console.log(newarray)
+console.log(newarray);
