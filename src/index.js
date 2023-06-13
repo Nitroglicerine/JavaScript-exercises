@@ -58,7 +58,7 @@
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
-    gearBoxType: true,
+    gearBoxAutomatic: true,
     productionYear: 1984,
   };
 
@@ -69,12 +69,12 @@ function createAuto() {
       alert("Пашол НАХУЙ");
     }
   } while (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023);
-  autoBase.gearBoxType = confirm("Коробка автомат?");
+  autoBase.gearBoxAutomatic = confirm("Коробка автомат?");
 
   return autoBase;
 }
 const newarray = [];
-console.log(createBase(createAuto(), newarray));
+createBase(createAuto(), newarray)
 function createBase(a, newarray) {
   newarray.push(a);
   return newarray;
@@ -82,3 +82,4 @@ function createBase(a, newarray) {
 while (confirm("Додати ще авто ?") == true) {
   createBase(createAuto(), newarray);
 }
+console.log(newarray)
