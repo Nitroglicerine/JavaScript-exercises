@@ -56,10 +56,11 @@
 // };
 
 const newarray = [];
-addBase(createAuto(), newarray);
+addInBase(createAuto(), newarray);
 while (confirm("Додати ще авто ?") == true) {
-  addBase(createAuto(), newarray);
+  addInBase(createAuto(), newarray);
 }
+
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
@@ -78,7 +79,8 @@ function createAuto() {
 
   return autoBase;
 }
-function addBase(a, newarray) {
+
+function addInBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
