@@ -60,12 +60,16 @@ addInBase(createAuto(), newarray);
 while (confirm("Додати ще авто ?") == true) {
   addInBase(createAuto(), newarray);
 }
+newarray.forEach((item) => {
+  item.clientName[0].toUpperCase(), item.carBrand[0].toUpperCase();
+});
 
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
     gearBoxAutomatic: true,
     productionYear: 1984,
+    clientName: "Mister Sidor",
   };
 
   autoBase.carBrand = prompt("Марка авто", ["Toyota"]);
@@ -76,6 +80,13 @@ function createAuto() {
     }
   } while (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023);
   autoBase.gearBoxAutomatic = confirm("Коробка автомат?");
+  do {
+    autoBase.clientName = prompt("Пізвище та імʼя власника", ["Цап Білан"]);
+
+    if (autoBase.clientName >= -999999999999999999999n) {
+      alert("Пашол Нахуй");
+    }
+  } while (autoBase.clientName >= -999999999999999999999n);
 
   return autoBase;
 }
