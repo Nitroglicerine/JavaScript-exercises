@@ -60,8 +60,15 @@ addInBase(createAuto(), newarray);
 while (confirm("Додати ще авто ?") == true) {
   addInBase(createAuto(), newarray);
 }
-newarray.forEach((item) => {
-  item.clientName[0].toUpperCase(), item.carBrand[0].toUpperCase();
+const newArr = newarray.map((item) => {
+  const newbase = {
+    carBrand:
+      item.carBrand[0].toUpperCase() + item.carBrand.slice(1).toLowerCase(),
+    gearBoxAutomatic: item.gearBoxAutomatic,
+    productionYear: item.productionYear,
+    clientName: item.clientName[0].toUpperCase() + item.clientName.substring(1),
+  };
+  return newbase;
 });
 
 function createAuto() {
@@ -81,7 +88,7 @@ function createAuto() {
   } while (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023);
   autoBase.gearBoxAutomatic = confirm("Коробка автомат?");
   do {
-    autoBase.clientName = prompt("Пізвище та імʼя власника", ["Цап Білан"]);
+    autoBase.clientName = prompt("Імʼя власника", ["Білан"]);
 
     if (autoBase.clientName >= -999999999999999999999n) {
       alert("Пашол Нахуй");
@@ -95,4 +102,4 @@ function addInBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
-console.log(newarray);
+console.log(newArr);
