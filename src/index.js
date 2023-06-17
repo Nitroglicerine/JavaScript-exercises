@@ -56,27 +56,18 @@
 // };
 
 const newarray = [];
-addInBase(createAuto(), newarray);
+addInBase(caseRepear(createAuto()), newarray);
+
 while (confirm("Додати ще авто ?") == true) {
   addInBase(createAuto(), newarray);
 }
-const newArr = newarray.map((item) => {
-  const newbase = {
-    carBrand:
-      item.carBrand[0].toUpperCase() + item.carBrand.slice(1).toLowerCase(),
-    gearBoxAutomatic: item.gearBoxAutomatic,
-    productionYear: item.productionYear,
-    clientName: item.clientName[0].toUpperCase() + item.clientName.substring(1),
-  };
-  return newbase;
-});
 
 function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
     gearBoxAutomatic: true,
     productionYear: 1984,
-    clientName: "Mister Sidor",
+    clientName: "Sidor",
   };
 
   autoBase.carBrand = prompt("Марка авто", ["Toyota"]);
@@ -89,12 +80,10 @@ function createAuto() {
   autoBase.gearBoxAutomatic = confirm("Коробка автомат?");
   do {
     autoBase.clientName = prompt("Імʼя власника", ["Білан"]);
-
     if (autoBase.clientName >= -999999999999999999999n) {
       alert("Пашол Нахуй");
     }
   } while (autoBase.clientName >= -999999999999999999999n);
-
   return autoBase;
 }
 
@@ -102,4 +91,19 @@ function addInBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
-console.log(newArr);
+
+function caseRepear(f) {
+  let res = "";
+  for (let i = 0; i < f.length; i++) {
+    if (i === 0) {
+      res += f[i].toUpperCase();
+    } else if (f[i - 1] === " ") {
+      res += f[i].toUpperCase();
+    } else {
+      res += f[i];
+    }
+  }
+  return f;
+}
+
+console.log(newarray);
