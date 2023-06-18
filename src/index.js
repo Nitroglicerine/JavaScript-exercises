@@ -56,7 +56,7 @@
 // };
 
 const newarray = [];
-addInBase(caseRepear(createAuto()), newarray);
+addInBase(createAuto(), newarray);
 
 while (confirm("Додати ще авто ?") == true) {
   addInBase(createAuto(), newarray);
@@ -71,8 +71,12 @@ function createAuto() {
   };
 
   autoBase.carBrand = prompt("Марка авто", ["Toyota"]);
+
+  autoBase.carBrand = caseRepear(autoBase.carBrand);
+
   do {
     autoBase.productionYear = +prompt("Рік випуску", [2022]);
+
     if (autoBase.productionYear <= 1900 || autoBase.productionYear > 2023) {
       alert("Пашол НАХУЙ");
     }
@@ -80,30 +84,25 @@ function createAuto() {
   autoBase.gearBoxAutomatic = confirm("Коробка автомат?");
   do {
     autoBase.clientName = prompt("Імʼя власника", ["Білан"]);
-    if (autoBase.clientName >= -999999999999999999999n) {
+
+    autoBase.clientName = caseRepear(autoBase.clientName);
+
+    if (typeof autoBase.clientName !== "string") {
       alert("Пашол Нахуй");
     }
-  } while (autoBase.clientName >= -999999999999999999999n);
+  } while (typeof autoBase.clientName !== "string");
+
   return autoBase;
 }
-
 function addInBase(a, newarray) {
   newarray.push(a);
   return newarray;
 }
 
-function caseRepear(f) {
-  let res = "";
-  for (let i = 0; i < f.length; i++) {
-    if (i === 0) {
-      res += f[i].toUpperCase();
-    } else if (f[i - 1] === " ") {
-      res += f[i].toUpperCase();
-    } else {
-      res += f[i];
-    }
-  }
-  return f;
+function caseRepear(x) {
+  return x.replace(/(^|\s)\S/g, function (a) {
+    return a.toUpperCase();
+  });
 }
 
 console.log(newarray);
