@@ -54,7 +54,7 @@
 //     }
 //   },
 // };
-import{addInBase,caseRepear}from "/home/hmuriy/Документы/JavaScript-exercises/src/utils.js"
+import{addInBase,caseRepear}from "/src/utils.js"
 const newarray = [];
 addInBase(createAuto(), newarray);
 
