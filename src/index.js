@@ -54,7 +54,7 @@
 //     }
 //   },
 // };
-
+import{addInBase,caseRepear}from "/home/hmuriy/Документы/JavaScript-exercises/src/utils.js"
 const newarray = [];
 addInBase(createAuto(), newarray);
 
@@ -93,16 +93,6 @@ function createAuto() {
   } while (typeof autoBase.clientName !== "string");
 
   return autoBase;
-}
-function addInBase(a, newarray) {
-  newarray.push(a);
-  return newarray;
-}
-
-function caseRepear(x) {
-  return x.replace(/(^|\s)\S/g, function (a) {
-    return a.toUpperCase();
-  });
 }
 
 console.log(newarray);
