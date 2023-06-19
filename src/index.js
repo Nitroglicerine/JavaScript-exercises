@@ -54,7 +54,7 @@
 //     }
 //   },
 // };
-import{addInBase,caseRepear}from "/src/utils.js"
+import{addInBase,caseRepear}from "./utils.js"
 const newarray = [];
 addInBase(createAuto(), newarray);
 
