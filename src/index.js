@@ -198,9 +198,9 @@ let createReduce = fedorenka.reduce((acc, item, index, array) => {
     createSum.names += ",";
   }
   return createSum
-}, { ages: 0, names: "" }); 
+}, { ages: 0, names: "" });
 
-console.log(createReduce);
+createReduce
 
 /*  task from reduce accumulator  --^^--^^-- */
 
@@ -239,6 +239,23 @@ function sortTrolles() {
   return trolleResult
 }
 
-console.log(sortTrolles())
+sortTrolles()
 
+/*  Delete symbols task */
+
+
+const reversedString = "Stop gninnipS My !sdroW"
+function newStr(str) {
+  str = str.split(" ")
+  str = Array.from(str)
+  const createNewStr = str.map((item) => {
+    
+    if (item.length > 5) {
+      return Array.from(item).reverse().join("")
+    }
+    else { return item }
+  })
+  return createNewStr
+}
+console.log(newStr(reversedString));
 
