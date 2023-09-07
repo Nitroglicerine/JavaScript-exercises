@@ -239,7 +239,7 @@ function sortTrolles() {
   return trolleResult
 }
 
-sortTrolles()
+// sortTrolles()
 
 /*  Delete symbols task */
 
@@ -247,15 +247,30 @@ sortTrolles()
 const reversedString = "Stop gninnipS My !sdroW"
 function newStr(str) {
   str = str.split(" ")
-  str = Array.from(str)
   const createNewStr = str.map((item) => {
-    
+
     if (item.length > 5) {
-      return Array.from(item).reverse().join("")
+      return item.split("").reverse().join("")
     }
     else { return item }
   })
   return createNewStr
 }
-console.log(newStr(reversedString));
+/* reverse strings task */
 
+
+
+let createNum = 130890;
+
+do {
+  let calcSum = 0;
+  createNum = createNum.toString()
+  for (let i = 0; i < createNum.length; i++) {
+    let f = +createNum[i]
+    calcSum = calcSum + f
+  }
+  createNum = calcSum
+}
+while (createNum > 9 || createNum < -9)
+
+console.log(createNum)
