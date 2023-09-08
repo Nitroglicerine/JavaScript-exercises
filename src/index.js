@@ -265,6 +265,7 @@ let createNum = 130890;
 do {
   let calcSum = 0;
   createNum = createNum.toString()
+
   for (let i = 0; i < createNum.length; i++) {
     let f = +createNum[i]
     calcSum = calcSum + f
@@ -273,4 +274,66 @@ do {
 }
 while (createNum > 9 || createNum < -9)
 
-console.log(createNum)
+// console.log(createNum)
+
+
+/* task from calculate numbers in one  ----^^^^^----- */
+
+const usersArrOne = []
+const usersArrTwo = ["Semen"]
+const usersArrTree = ["Semen", "Vasyl"]
+const usersArrFour = ["Vasyl", "Petro", "Mykola"]
+const usersArrFive = ["Vasyl", "Petro", "Mykola", "Ivan"]
+
+function checkUsers(array) {
+
+  if (array.length === 0) {
+    return "no one likes this"
+  }
+  else if (array.length === 1) {
+    return `${array} ${"likes this"}`
+  }
+  else if (array.length === 2) {
+    return `${array[0]} and ${array[1]} ${"likes this"}`
+  }
+  else if (array.length === 3) {
+    return `${array[0]}, ${array[1]} and ${array[2]} ${"likes this"}`
+  }
+  else {
+    return `${array[0]}, ${array[1]} and ${array.length - 2} ${"others likes this"}`
+  }
+
+}
+
+/* task for likes with social media users  ---^^^^----*/
+
+const arrayCount = [1, 2, 3, 1, 1, 4]
+const deleteArrValue = [1]
+
+function sortDoublesAndDelete(arrCount, deleteValue) {
+  let createNewValue = arrCount.filter((item) => {
+
+    if (item == deleteValue) { return false }
+    return true
+  })
+  return createNewValue;
+}
+
+/* search and delete array elements ---^^^----*/
+
+
+
+const arrPhoneNum = [5, 7, 3, 6, 5, 1, 7, 2, 9, 0]
+
+function newPhoneFormate(arrNum) {
+
+  const firstArr = arrNum.slice(0, 3).join("")
+  const secondArr = arrNum.slice(3, 6).join("")
+  const lastArr = arrNum.slice(6).join("")
+  const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
+
+  return resultNumValue
+}
+console.log(newPhoneFormate(arrPhoneNum))
+
+/* change phone number format ---^^^----*/
