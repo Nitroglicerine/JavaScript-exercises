@@ -322,55 +322,49 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
 /* search and delete array elements ---^^^----*/
 
 
-let arrPhoneNum;
-do {
-  arrPhoneNum = +prompt("your phone number", ["enter here"])
-  if (isNaN(arrPhoneNum) || arrPhoneNum === 0) {
-    alert("Пашол НАХУЙ")
-  }
-}
+// let arrPhoneNum;
+// do {
+//   arrPhoneNum = +prompt("your phone number", ["enter here"])
+//   if (isNaN(arrPhoneNum) || arrPhoneNum === 0) {
+//     alert("Пашол НАХУЙ")
+//   }
+// }
 
-while (isNaN(arrPhoneNum) || arrPhoneNum === 0)
-do {
-  arrPhoneNum = arrPhoneNum.toString()
-  if (arrPhoneNum.length > 10 || arrPhoneNum.length < 5) {
-    alert("Пашол НАХУЙ")
-  }
-}
+// while (isNaN(arrPhoneNum) || arrPhoneNum === 0)
+// do {
+//   arrPhoneNum = arrPhoneNum.toString()
+//   if (arrPhoneNum.length > 10 || arrPhoneNum.length < 5) {
+//     alert("Пашол НАХУЙ")
+//   }
+// }
 
-while (arrPhoneNum.length > 10 || arrPhoneNum.length < 5)
+// while (arrPhoneNum.length > 10 || arrPhoneNum.length < 5)
 
-function newPhoneFormate(arrNum) {
-  const firstArr = arrNum.slice(0, 3)
-  const secondArr = arrNum.slice(3, 6)
-  const lastArr = arrNum.slice(6)
-  const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
-  return resultNumValue
-}
-alert(newPhoneFormate(arrPhoneNum))
+// function newPhoneFormate(arrNum) {
+//   const firstArr = arrNum.slice(0, 3)
+//   const secondArr = arrNum.slice(3, 6)
+//   const lastArr = arrNum.slice(6)
+//   const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
+//   return resultNumValue
+// }
+// alert(newPhoneFormate(arrPhoneNum))
 
 /* change phone number format ---^^^----*/
 
 
 
+const bitCount = 1234;
 
+function bitReverse(count) {
+  let value = count.toString(2)
+  let counter = 0;
 
+  for (let i = 0; i < value.length; i++) {
+    let r = +value[i]
+    counter = counter + r
+  }
+  return counter
+}
+// console.log(bitReverse(bitCount))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Напишите функцию, которая принимает на вход целое число и возвращает количество битов,
-
-равных единице в двоичном представлении этого числа. Вы можете гарантировать, что ввод неотрицательный. */
+/* task for returned the number of bits ---^^^----*/
