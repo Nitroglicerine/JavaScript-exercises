@@ -325,12 +325,12 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
 let arrPhoneNum;
 do {
   arrPhoneNum = +prompt("your phone number", ["enter here"])
-  if (isNaN(arrPhoneNum)) {
+  if (isNaN(arrPhoneNum) || arrPhoneNum === 0) {
     alert("Пашол НАХУЙ")
   }
 }
 
-while (isNaN(arrPhoneNum))
+while (isNaN(arrPhoneNum) || arrPhoneNum === 0)
 do {
   arrPhoneNum = arrPhoneNum.toString()
   if (arrPhoneNum.length > 10 || arrPhoneNum.length < 5) {
@@ -347,7 +347,7 @@ function newPhoneFormate(arrNum) {
   const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
   return resultNumValue
 }
-console.log(newPhoneFormate(arrPhoneNum))
+alert(newPhoneFormate(arrPhoneNum))
 
 /* change phone number format ---^^^----*/
 
