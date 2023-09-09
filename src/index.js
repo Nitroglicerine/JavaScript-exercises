@@ -322,18 +322,55 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
 /* search and delete array elements ---^^^----*/
 
 
+let arrPhoneNum;
+do {
+  arrPhoneNum = +prompt("your phone number", ["enter here"])
+  if (isNaN(arrPhoneNum)) {
+    alert("Пашол НАХУЙ")
+  }
+}
 
-const arrPhoneNum = [5, 7, 3, 6, 5, 1, 7, 2, 9, 0]
+while (isNaN(arrPhoneNum))
+do {
+  arrPhoneNum = arrPhoneNum.toString()
+  if (arrPhoneNum.length > 10 || arrPhoneNum.length < 5) {
+    alert("Пашол НАХУЙ")
+  }
+}
+
+while (arrPhoneNum.length > 10 || arrPhoneNum.length < 5)
 
 function newPhoneFormate(arrNum) {
-
-  const firstArr = arrNum.slice(0, 3).join("")
-  const secondArr = arrNum.slice(3, 6).join("")
-  const lastArr = arrNum.slice(6).join("")
+  const firstArr = arrNum.slice(0, 3)
+  const secondArr = arrNum.slice(3, 6)
+  const lastArr = arrNum.slice(6)
   const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
-
   return resultNumValue
 }
 console.log(newPhoneFormate(arrPhoneNum))
 
 /* change phone number format ---^^^----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Напишите функцию, которая принимает на вход целое число и возвращает количество битов,
+
+равных единице в двоичном представлении этого числа. Вы можете гарантировать, что ввод неотрицательный. */
