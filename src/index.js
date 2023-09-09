@@ -356,15 +356,18 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
 const bitCount = 1234;
 
 function bitReverse(count) {
-  let value = count.toString(2)
-  let counter = 0;
+  if (count >= 0) {
+    let value = count.toString(2)
+    let counter = 0;
 
-  for (let i = 0; i < value.length; i++) {
-    let r = +value[i]
-    counter = counter + r
+    for (let i = 0; i < value.length; i++) {
+      let r = +value[i]
+      counter = counter + r
+    }
+    return counter
   }
-  return counter
+  else { return "please insert number more 0" }
 }
-// console.log(bitReverse(bitCount))
+console.log(bitReverse(bitCount))
 
 /* task for returned the number of bits ---^^^----*/
