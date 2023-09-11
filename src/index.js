@@ -322,32 +322,37 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
 /* search and delete array elements ---^^^----*/
 
 
-// let arrPhoneNum;
-// do {
-//   arrPhoneNum = +prompt("your phone number", ["enter here"])
-//   if (isNaN(arrPhoneNum) || arrPhoneNum === 0) {
-//     alert("Пашол НАХУЙ")
-//   }
-// }
 
-// while (isNaN(arrPhoneNum) || arrPhoneNum === 0)
-// do {
-//   arrPhoneNum = arrPhoneNum.toString()
-//   if (arrPhoneNum.length > 10 || arrPhoneNum.length < 5) {
-//     alert("Пашол НАХУЙ")
-//   }
-// }
+function createPhoneNum() {
+  let arrPhoneNum
+  do {
+    arrPhoneNum = +prompt("your phone number", ["enter here"])
+    if (isNaN(arrPhoneNum)) {
+      alert("Пашол НАХУЙ")
+    }
+    else if (arrPhoneNum === 0) {
+      return
+    }
+  }
 
-// while (arrPhoneNum.length > 10 || arrPhoneNum.length < 5)
+  while (isNaN(arrPhoneNum))
+  let arrLght = arrPhoneNum.length
+  do {
+    arrPhoneNum = arrPhoneNum.toString()
+    if (arrLght > 10 || arrLght < 5) {
+      alert("Пашол НАХУЙ")
+    }
+  }
 
-// function newPhoneFormate(arrNum) {
-//   const firstArr = arrNum.slice(0, 3)
-//   const secondArr = arrNum.slice(3, 6)
-//   const lastArr = arrNum.slice(6)
-//   const resultNumValue = `(${firstArr}) ${secondArr}-${lastArr}`
-//   return resultNumValue
-// }
-// alert(newPhoneFormate(arrPhoneNum))
+  while (arrLght > 10 || arrLght < 5)
+  return alert(newPhoneFormate(arrPhoneNum))
+}
+
+function newPhoneFormate(arrNum) {
+  const resultNumValue = `(${arrNum.slice(0, 3)}) ${arrNum.slice(3, 6)}-${arrNum.slice(6)}`
+  return resultNumValue
+}
+
 
 /* change phone number format ---^^^----*/
 
@@ -368,6 +373,24 @@ function bitReverse(count) {
   }
   else { return "please insert number more 0" }
 }
-console.log(bitReverse(bitCount))
+
 
 /* task for returned the number of bits ---^^^----*/
+
+
+const arrOutlierOne = [2, 4, 0, 100, 4, 11, 2602, 36]
+const arrOutlierTwo = [160, 3, 1719, 19, 11, 13, -21]
+
+function findOutlierValue(arrOutlier) {
+  let branchrrOutlierOddnum = arrOutlier.filter((item) => { if (item % 2 === 1) return true; })
+  let branchrrOutlierEvenNum = arrOutlier.filter((item) => { if (item % 2 === 0) return true; })
+
+  if (branchrrOutlierOddnum.length > 1) {
+    return branchrrOutlierEvenNum;
+  }
+  else { return branchrrOutlierOddnum };
+}
+console.log(findOutlierValue(arrOutlierOne));
+
+
+/* Find The Parity Outlier ---^^^---- */
