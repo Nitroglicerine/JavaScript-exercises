@@ -1,9 +1,12 @@
+import "./oop";
+
 // let user = {
 //   name: "Semen",
 //   skills: ["lazzy master", "chill god", "inclusive man"],
 //   sayHi() {
 //     console.log("Hello from" + this.name);
 //   },
+
 
 //   createSkill() {
 //     let x = prompt("Add skill", ["Mad"]);
@@ -349,8 +352,8 @@ function createPhoneNum() {
 }
 
 function newPhoneFormate(arrNum) {
-  const resultNumValue = `(${arrNum.slice(0, 3)}) ${arrNum.slice(3, 6)}-${arrNum.slice(6)}`
-  return resultNumValue
+
+  return `(${arrNum.slice(0, 3)}) ${arrNum.slice(3, 6)}-${arrNum.slice(6)}`
 }
 
 
@@ -390,7 +393,224 @@ function findOutlierValue(arrOutlier) {
   }
   else { return branchrrOutlierOddnum };
 }
-console.log(findOutlierValue(arrOutlierOne));
 
 
 /* Find The Parity Outlier ---^^^---- */
+
+const strValue = "Федір кончений лох"
+const arrOfLetters = ["а", "б", "в", "г", "ґ", "д", "е", "є", "ж", "з", "и", "i", "ї", "й", "к", "л", "м", "н",
+  "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ю", "я"]
+function foundLettersNum(strValue, arrLett) {
+  const sortArr = []
+  let strToArr = strValue.toLowerCase().split("")
+
+  for (let i = 0; i < strToArr.length; i++) {
+    for (let count = -1; (count = arrLett.indexOf(strToArr[i], count + 1)) !== -1;) {
+      sortArr.push(count + 1);
+    }
+  }
+  return sortArr.join(" ")
+}
+
+
+/* return alphabet numbers task ---^^^----*/
+
+
+
+const fedorenkaStreetGames = [
+  { name: "lyoha Yarovyi", botlesBeer: 15, smokeJoints: 27, drugsDoppings: 11 },
+  { name: "Mykola Dmytrenko", botlesBeer: 3, smokeJoints: 0, drugsDoppings: 1 },
+  { name: "Oksana Leshchenko", botlesBeer: 12, smokeJoints: 37, drugsDoppings: 87 },
+  { name: "Oleg Pidlisnyi", botlesBeer: 35, smokeJoints: 57, drugsDoppings: 11 }
+];
+
+function streetGamesScore(fedorenka) {
+  const createValueObj = fedorenka.map((item) => {
+    const createObj = { name: "s", score: 0 };
+    createObj.name = item.name;
+    createObj.score = item.botlesBeer * 5 + item.smokeJoints * 3 + item.drugsDoppings * 2;
+
+    return createObj
+  });
+  const sortedStreetGamesWinners = createValueObj.sort((a, b) => {
+    // if (a.score !== b.score) { return a.score - b.score } else { return a.name - b.name }
+    let f = a.score !== b.score ? a.score - b.score : a.name - b.name;
+  })
+
+  return sortedStreetGamesWinners;
+}
+
+/* total score calculation task */
+
+/*
+Напишите функцию, которая будет возвращать количество различных буквенных символов и числовых цифр,
+
+не зависящих от регистра, которые встречаются во входной строке более одного раза. Можно предположить,
+
+что входная строка содержит только буквы алфавита (как прописные, так и строчные) и числовые цифры.
+
+
+"abcde" -> 0 # no characters repeats more than once;
+
+"aabbcde" -> 2 # 'a' and 'b';
+
+"aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`);
+
+"indivisibility" -> 1 # 'i' occurs six times;
+
+"Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice;
+
+"aA11" -> 2 # 'a' and '1';
+
+"ABBA" -> 2 # 'A' and 'B' each occur twice;
+
+
+*/
+
+
+
+function backRecursion(arg3) {
+  if (arg3 === 1) { return arg3 }
+  else { return arg3 + backRecursion(arg3 - 1) }
+}
+// console.log(backRecursion(5));
+
+
+
+
+function sumToNum2(arg3) {
+  let count = 0;
+
+  for (let i = 0; i <= arg3; i++) {
+
+    count += i;
+  }
+  return count;
+}
+
+const arr1 = [1, 2, 3, 4, 5]
+const arr2 = [6, 7, 8, 9, 10]
+const merged = [0, ...arr1, ...arr2]
+
+
+function baxBunny(arg1, arg2) {
+
+
+}
+
+baxBunny("allo", "semen", "ebac")
+
+const user = {
+  // lol: 5,
+  // kk: ''
+}
+
+
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+const sumSalaries = Object.values(salaries)
+const sumSaleriesValues = sumSalaries.reduce((acc, item) => {
+  return acc + item
+}, 0)
+
+
+let salaries1 = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+let count = 0;
+
+for (let key in salaries1) {
+  count += salaries1[key];
+}
+
+
+let menu = {
+  title: "My menu",
+  width: 200,
+  height: 300,
+};
+
+function multiplyNumeric(menu) {
+  for (let key in menu) {
+    if (typeof menu[key] === "number") {
+      menu[key] *= 2;
+    }
+  }
+
+  return menu;
+}
+
+let calculator = {
+  sum() {
+    return this.a + this.b;
+  },
+
+  mul() {
+    return this.a * this.b;
+  },
+
+  read() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  }
+};
+
+
+
+// let calculetor = new Calc()
+// calculetor.read1()
+// calculetor.mul1()
+// console.log(calculetor);
+
+function Calc() {
+  this.read1 = function () {
+    this.calcul1 = +prompt("insert number one", ["121"])
+    this.calcul2 = +prompt("insert number two", ["121"])
+  }
+
+  this.sum1 = function () {
+    this.calculSum = this.calcul1 + this.calcul2;
+    this.clearCurrentValue()
+  }
+
+  this.mul1 = function () {
+    this.calculMul = this.calcul1 * this.calcul2;
+    this.clearCurrentValue()
+  }
+
+  this.clearCurrentValue = function () {
+    delete this.calcul1, delete this.calcul2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let bigValue = new AccValueObj(5)
+// bigValue.SumAcc()
+// bigValue.SumAcc()
+// console.table(bigValue)
+
+function AccValueObj(accum) {
+  this.accum = accum
+  this.SumAcc = function () {
+    this.accum += +prompt("insert num"[2])
+  }
+}
