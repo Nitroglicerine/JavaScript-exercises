@@ -1,4 +1,4 @@
-import "./oop";
+import "./oop.js"
 
 // let user = {
 //   name: "Semen",
