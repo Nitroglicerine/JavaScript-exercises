@@ -2,7 +2,7 @@
 //     newarray.push(a);
 //     return newarray;
 //   }
-  
+
 //   function caseRepear(x) {
 //     return x.replace(/(^|\s)\S/g, function (a) {
 //       return a.toUpperCase();
@@ -14,7 +14,7 @@
 //    { num++
 // if( num>50){
 //   return num
-// } 
+// }
 // createNewRecursion()
 
 // }
@@ -29,14 +29,12 @@
 //             }
 //           }
 //         }
-//       } 
-//     } 
+//       }
+//     }
 
-
-  // function(a = 2, b = 1) {
+// function(a = 2, b = 1) {
 //       return 2 * b
 //    }
-
 
 //   function(a = 2, b = 1) {
 //     return 2 * b
@@ -46,13 +44,12 @@
 //   return 2 * b
 // }
 
-// function(a = 2, b 
-
-
+// function(a = 2, b
 
 // avarage age of Fedora people
 // forEach, cycle, reduce
 // fedorenka.forEach((index,)=>{
-//   return 
+//   return
 // })
 // console,log(prev)
+
