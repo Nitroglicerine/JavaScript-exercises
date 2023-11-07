@@ -1,5 +1,5 @@
 
-class Vehicle {
+export default class Vehicle {
     constructor(isDamaged, productYear) {
       (this.isDamaged = isDamaged), (this.productYear = productYear);
     }
@@ -11,4 +11,4 @@ class Vehicle {
     }
   }
 
-  export{Vehicle}
+  

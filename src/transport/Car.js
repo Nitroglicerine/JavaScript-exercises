@@ -1,4 +1,6 @@
-class Car extends Vehicle {
+import  Vehicle  from "./vehicleOptions.js"
+
+export default class Car extends Vehicle {
     constructor(brand, productYear, sellegeOptions, user, isDamaged) {
       super(isDamaged, productYear);
       this.brand = brand || null;
@@ -47,4 +49,3 @@ class Car extends Vehicle {
     };
   }
   
-  export {Car}

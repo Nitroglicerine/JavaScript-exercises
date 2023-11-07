@@ -1,4 +1,6 @@
-class Jet extends Vehicle {
+import Vehicle  from "./vehicleOptions.js"
+
+export default class Jet extends Vehicle {
     constructor(
       company,
       brandOfJet,
@@ -34,4 +36,4 @@ class Jet extends Vehicle {
     }
   }
   
-  export{Jet};
+  
