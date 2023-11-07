@@ -1,8 +1,11 @@
 
 export default class Vehicle {
-    constructor(isDamaged, productYear) {
-      (this.isDamaged = isDamaged), (this.productYear = productYear);
+   
+  constructor(isDamaged, productYear) {
+      this.isDamaged = isDamaged,
+      this.productYear = productYear
     }
+  
     setDamage() {
       this.isDamaged = confirm("Has damaged ?");
     }
