@@ -1,4 +1,4 @@
-import  Vehicle  from './Vehicle.js'
+import  Vehicle  from './Vehicle.js';
 
 export default class Car extends Vehicle {
     constructor(brand, productYear, sellegeOptions, user, isDamaged) {

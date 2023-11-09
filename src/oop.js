@@ -1,5 +1,5 @@
-import Car  from './transport/Car.js'
-import  Jet  from './transport/Jet.js'
+import Car  from './transport/Car.js';
+import  Jet  from './transport/Jet.js';
 
 const firstValueObj = new Car();
 const secondValueObj = new Car(
