@@ -15,6 +15,7 @@ export default class Jet extends Vehicle {
       this.typeJetCargo = typeJetCargo;
       this.jetClass = jetClass || null;
     }
+    
     setCompany() {
       this.company = prompt("please insert company name", ["Spirit Airlines"]);
     }
