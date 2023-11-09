@@ -1,4 +1,4 @@
-import Vehicle  from "./Vehicle.js"
+import Vehicle  from './Vehicle.js';
 
 export default class Jet extends Vehicle {
     constructor(
