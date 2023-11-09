@@ -3,7 +3,7 @@ export default class Vehicle {
    
   constructor(isDamaged, productYear) {
       this.isDamaged = isDamaged
-      this.productYear = productYear
+      this.productYear = productYear;
     }
   
     setDamage() {
