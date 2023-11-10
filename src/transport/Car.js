@@ -38,7 +38,7 @@ export default class Car extends Vehicle {
       this.brand = prompt("insert car brand", ["daihatsu"]);
     }
   
-    removeOption = function () {
+    removeOption () {
       const textResult = prompt("insert option for remove ", "ESP");
   
       if (this.sellegeOptions.has(textResult) === true) {
