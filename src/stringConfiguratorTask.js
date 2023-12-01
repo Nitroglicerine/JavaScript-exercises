@@ -4,7 +4,7 @@ const usersArrTree = ["Semen", "Vasyl"]
 const usersArrFour = ["Vasyl", "Petro", "Mykola"]
 const usersArrFive = ["Vasyl", "Petro", "Mykola", "Ivan"]
 
-function checkUsers(array) {
+export function checkUsers(array) {
 
   if (array.length === 0) {
     return "no one likes this"
@@ -23,4 +23,3 @@ function checkUsers(array) {
   }
 
 }
-export{checkUsers}

@@ -19,7 +19,7 @@
 // calculetor.mul1()
 // console.log(calculetor);
 
-function Calc() {
+export function Calc() {
     this.read1 = function () {
       this.calcul1 = +prompt("insert number one", ["121"])
       this.calcul2 = +prompt("insert number two", ["121"])
@@ -39,4 +39,3 @@ function Calc() {
       delete this.calcul1, delete this.calcul2;
     }
 }
-export {Calc}

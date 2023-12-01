@@ -1,4 +1,4 @@
-let createNum = 130890;
+export let createNum = 130890;
 
 do {
   let calcSum = 0;
@@ -14,4 +14,3 @@ while (createNum > 9 || createNum < -9)
 
 // console.log(createNum)
 
-export{createNum}

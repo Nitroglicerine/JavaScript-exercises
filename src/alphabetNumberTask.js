@@ -1,7 +1,7 @@
 const strValue = "Федір кончений лох"
 const arrOfLetters = ["а", "б", "в", "г", "ґ", "д", "е", "є", "ж", "з", "и", "i", "ї", "й", "к", "л", "м", "н",
   "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ю", "я"]
-function foundLettersNum(strValue, arrLett) {
+export function foundLettersNum(strValue, arrLett) {
   const sortArr = []
   let strToArr = strValue.toLowerCase().split("")
 
@@ -12,4 +12,4 @@ function foundLettersNum(strValue, arrLett) {
   }
   return sortArr.join(" ")
 }
-export{foundLettersNum}
+

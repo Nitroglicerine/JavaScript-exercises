@@ -1,5 +1,5 @@
 
-let user = {
+export let user = {
   name: "Semen",
   skills: ["lazzy master", "chill god", "inclusive man"],
   sayHi() {
@@ -56,4 +56,3 @@ let user = {
     }
   },
 };
-export{user}

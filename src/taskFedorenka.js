@@ -1,4 +1,4 @@
-const fedorenka = [
+export const fedorenka = [
   {
     name: "Lyoha",
     narik: true,
@@ -60,4 +60,4 @@ let createReduce = fedorenka.reduce(
   },
   { ages: 0, names: "" }
 );
-export { fedorenka };
+

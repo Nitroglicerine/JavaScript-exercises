@@ -1,5 +1,5 @@
 const reversedString = "Stop gninnipS My !sdroW"
-function newStr(str) {
+export function newStr(str) {
   str = str.split(" ")
   const createNewStr = str.map((item) => {
 
@@ -10,4 +10,3 @@ function newStr(str) {
   })
   return createNewStr
 }
-export {newStr}

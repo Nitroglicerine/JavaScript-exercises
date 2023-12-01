@@ -1,6 +1,6 @@
 const bitCount = 1234;
 
-function bitReverse(count) {
+export function bitReverse(count) {
   if (count >= 0) {
     let value = count.toString(2);
     let counter = 0;
@@ -14,4 +14,3 @@ function bitReverse(count) {
     return "please insert number more 0";
   }
 }
-export{ bitReverse}

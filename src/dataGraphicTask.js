@@ -1,4 +1,4 @@
-function numDecorator(arg1, arg2, arg3, arg4, arg5) {
+export function numDecorator(arg1, arg2, arg3, arg4, arg5) {
     const argArray = [arg1, arg2, arg3, arg4, arg5];
     let require1 = " ____ ";
     let require2 = "......";
@@ -156,4 +156,4 @@ for data = [10,5,3,1,4] :
 
 Значение данных также меньше 50 и всегда положительное. УДАЧИ :)
 */
-  export{numDecorator}
+ 

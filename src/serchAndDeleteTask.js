@@ -1,7 +1,7 @@
 const arrayCount = [1, 2, 3, 1, 1, 4]
 const deleteArrValue = [1]
 
-function sortDoublesAndDelete(arrCount, deleteValue) {
+export function sortDoublesAndDelete(arrCount, deleteValue) {
   let createNewValue = arrCount.filter((item) => {
 
     if (item == deleteValue) { return false }
@@ -9,4 +9,3 @@ function sortDoublesAndDelete(arrCount, deleteValue) {
   })
   return createNewValue;
 }
-export{sortDoublesAndDelete}

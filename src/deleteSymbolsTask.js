@@ -1,4 +1,4 @@
-function sortTrolles() {
+export function sortTrolles() {
     const arrTrolles = ["а", "е", "є", "и", "і", "ї", "о", "у", "ю", "я",
       "А", "Е", "Є", "И", "І", "Ї", "О", "У", "Ю", "Я"]
     let trollesText = "Цей сайт для невдах, ЛОЛ"
@@ -33,4 +33,4 @@ function sortTrolles() {
   }
   
   // sortTrolles()
-  export{sortTrolles}
+  

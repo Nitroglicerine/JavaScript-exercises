@@ -15,7 +15,7 @@ const fedorenkaStreetGames = [
   },
 ];
 
-function streetGamesScore(fedorenka) {
+export function streetGamesScore(fedorenka) {
   const createValueObj = fedorenka.map((item) => {
     const createObj = { name: "s", score: 0 };
     createObj.name = item.name;
@@ -31,4 +31,3 @@ function streetGamesScore(fedorenka) {
 
   return sortedStreetGamesWinners;
 }
-export {streetGamesScore}

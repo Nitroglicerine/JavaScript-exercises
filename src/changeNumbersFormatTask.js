@@ -1,4 +1,4 @@
-function createPhoneNum() {
+export function createPhoneNum() {
   let arrPhoneNum;
   do {
     arrPhoneNum = +prompt("your phone number", ["enter here"]);
@@ -21,4 +21,3 @@ function createPhoneNum() {
 function newPhoneFormate(arrNum) {
   return `(${arrNum.slice(0, 3)}) ${arrNum.slice(3, 6)}-${arrNum.slice(6)}`;
 }
-export{createPhoneNum}

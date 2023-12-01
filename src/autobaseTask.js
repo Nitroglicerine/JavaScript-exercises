@@ -5,7 +5,7 @@ import { addInBase,caseRepear } from "./autobaseTaskUtils.js";
 //   addInBase(createAuto(), newarray);
 // }
 const newarray = [];
-function createAuto() {
+export function createAuto() {
   let autoBase = {
     carBrand: "vehicleBrand",
     gearBoxAutomatic: true,
@@ -38,4 +38,3 @@ function createAuto() {
   return autoBase;
 }
 // addInBase(createAuto(), newarray);
-export {createAuto}

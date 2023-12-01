@@ -1,5 +1,5 @@
 let num = 0;
-function createNewRecursion() {
+export function createNewRecursion() {
   num++;
   if (num > 50) {
     return num;
@@ -8,7 +8,7 @@ function createNewRecursion() {
 }
 //   console.log(createNewRecursion())
 
-function backRecursion(arg3) {
+export function backRecursion(arg3) {
   if (arg3 === 1) {
     return arg3;
   } else {
@@ -16,4 +16,3 @@ function backRecursion(arg3) {
   }
 }
 // console.log(backRecursion(5));
-export {createNewRecursion,backRecursion}
