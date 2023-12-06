@@ -14,4 +14,4 @@ export function nameInStr(arg1, arg2) {
   return true;
 }
 
-console.log(nameInStr("Across the rivers", "chris"));
+//console.log(nameInStr("Across the rivers", "chris"));
