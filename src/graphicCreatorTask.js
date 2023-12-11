@@ -1,17 +1,30 @@
-const arr = [1, -3, 9, -7, -12, 5];
+export function diagramCreator(...args) {
+  const valueTrue = "______";
+  const valueTrueColumn = "|    |";
+  const valueFalse = "......";
+  let Scalecolum = " ^ ";
+  let diagramArray = [...args];
 
-const arr2 = arr.filter((item) => {
-  if (item >= 0) {
-    return true;
-  }
-});
+  for (let iterator = 10; iterator >= 0; iterator--) {
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === iterator) {
+        diagramArray[i] = valueTrue;
+      } else if (args[i] > iterator) {
+        diagramArray[i] = valueTrueColumn ;
+      } else {
+        diagramArray[i] = valueFalse;
+      }
+    }
 
-//console.log(arr2);
+    if (iterator !== 10) {
+      Scalecolum = " | ";
+    }
 
-export function ggeq(...args) {
-  if (args.length == undefined) {
-    return;
-  } else {
-    return console.log("wf");
+    console.log(diagramArray + Scalecolum + iterator);
   }
 }
+
+ diagramCreator(10, 3, 7, 1, 4, 5, 7, 9);
+
+
+
