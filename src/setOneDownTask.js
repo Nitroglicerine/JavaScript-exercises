@@ -1,22 +1,19 @@
 export function setStrValue(str) {
-    let resultString = "";
-    let resValue;
-    if (typeof str === "string") {
-     
-      for (let i = 0; i < str.length; i++) {
-       
-        if (str[i] !== " ") {
-          resValue = str.charCodeAt(i) - 1;
-        } else {
-          resValue = str.charCodeAt(i);
-        }
-        resultString += String.fromCharCode(resValue);
-      }
-    } else {
-      return "Input is not a string";
+  let resultString = "";
+  let resValue;
+
+  if (typeof str === "string") {
+    for (let i = 0; i < str.length; i++) {
+      str[i] !== " "
+        ? (resValue = str.charCodeAt(i) - 1)
+        : (resValue = str.charCodeAt(i));
+
+      resultString += String.fromCharCode(resValue);
     }
-  
-    return resultString;
+  } else {
+    return "Input is not a string";
   }
-//   console.log(setStrValue("Uif usjdl up uijt lbub"));
-  
+
+  return resultString;
+}
+  //console.log(setStrValue("Uif usjdl up uijt lbub"));
