@@ -2,7 +2,7 @@ export function diagramCreator(...args) {
   const valueTrue = "______";
   const valueTrueColumn = "|    |";
   const valueFalse = "......";
-  let Scalecolum = " ^ ";
+  let scalecolum = " ^ ";
   const diagramArray = [...args];
 
   for (let iterator = 10; iterator >= 0; iterator--) {
@@ -17,10 +17,10 @@ export function diagramCreator(...args) {
     }
 
     if (iterator !== 10) {
-      Scalecolum = " | ";
+      scalecolum = " | ";
     }
 
-    console.log(diagramArray + Scalecolum + iterator);
+    console.log(diagramArray + scalecolum + iterator);
   }
 }
 
