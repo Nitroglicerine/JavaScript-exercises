@@ -1,17 +1,22 @@
-const arr = [1, -3, 9, -7, -12, 5];
+export function diagramCreator(...args) {
+  let scalecolumn = " ^ ";
+  const diagramArray = [...args];
 
-const arr2 = arr.filter((item) => {
-  if (item >= 0) {
-    return true;
-  }
-});
+  for (let iterator = 10; iterator >= 0; iterator--) {
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === iterator) {
+        diagramArray[i] = " ____ ";
+      } else if (args[i] > iterator) {
+        diagramArray[i] = "|    |";
+      } else {
+        diagramArray[i] = "......";
+      }
+    }
 
-//console.log(arr2);
+    iterator !== 10 ? (scalecolumn = " | ") : scalecolumn;
 
-export function ggeq(...args) {
-  if (args.length == undefined) {
-    return;
-  } else {
-    return console.log("wf");
+    console.log(diagramArray.join("") + scalecolumn + iterator);
   }
 }
+
+diagramCreator(10, 3, 7, 1, 4, 5, 7, 9);

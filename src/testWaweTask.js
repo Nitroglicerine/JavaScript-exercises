@@ -1,15 +1,15 @@
 export function testWawe1(test) {
-  let count = [];
+  const resultArr = [];
 
   for (let i = 0; i < test.length; i++) {
-    const createStr = test[i].toUpperCase();
-    const letter = test.substr(0, [i]);
-    const backLetter = test.slice(i + 1);
+    const createUpperLetter = test[i].toUpperCase();
+    const firstPartStr = test.slice(0, i);
+    const lastPartStr = test.slice(i + 1);
 
-    count.push(letter + createStr + backLetter);
+    resultArr.push(firstPartStr + createUpperLetter + lastPartStr);
   }
 
-  return count;
+  return resultArr;
 }
 
-console.log(testWawe1("zalupaklan"));
+//console.log(testWawe1("zalupaklan"));
