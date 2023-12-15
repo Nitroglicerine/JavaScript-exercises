@@ -3,14 +3,14 @@ export function diagramCreator(...args) {
   const valueTrueColumn = "|    |";
   const valueFalse = "......";
   let Scalecolum = " ^ ";
-  let diagramArray = [...args];
+  const diagramArray = [...args];
 
   for (let iterator = 10; iterator >= 0; iterator--) {
     for (let i = 0; i < args.length; i++) {
       if (args[i] === iterator) {
         diagramArray[i] = valueTrue;
       } else if (args[i] > iterator) {
-        diagramArray[i] = valueTrueColumn ;
+        diagramArray[i] = valueTrueColumn;
       } else {
         diagramArray[i] = valueFalse;
       }
@@ -24,7 +24,4 @@ export function diagramCreator(...args) {
   }
 }
 
- diagramCreator(10, 3, 7, 1, 4, 5, 7, 9);
-
-
-
+diagramCreator(10, 3, 7, 1, 4, 5, 7, 9);
