@@ -1,26 +1,21 @@
 export function diagramCreator(...args) {
-  const valueTrue = "______";
-  const valueTrueColumn = "|    |";
-  const valueFalse = "......";
-  let scalecolum = " ^ ";
+  let scalecolumn = " ^ ";
   const diagramArray = [...args];
 
   for (let iterator = 10; iterator >= 0; iterator--) {
     for (let i = 0; i < args.length; i++) {
       if (args[i] === iterator) {
-        diagramArray[i] = valueTrue;
+        diagramArray[i] = " ____ ";
       } else if (args[i] > iterator) {
-        diagramArray[i] = valueTrueColumn;
+        diagramArray[i] = "|    |";
       } else {
-        diagramArray[i] = valueFalse;
+        diagramArray[i] = "......";
       }
     }
 
-    if (iterator !== 10) {
-      scalecolum = " | ";
-    }
+    iterator !== 10 ? (scalecolumn = " | ") : scalecolumn;
 
-    console.log(diagramArray + scalecolum + iterator);
+    console.log(diagramArray.join("") + scalecolumn + iterator);
   }
 }
 
