@@ -1,5 +1,3 @@
-
-
 export function deleteCount(text) {
   let resultText;
 
